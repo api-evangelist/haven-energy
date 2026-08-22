@@ -1,0 +1,84 @@
+generated: '2026-08-22'
+method: probed
+source: live GET of /.well-known/* on every Haven Energy host discovered during contract discovery
+note: >-
+  Every /.well-known/ path on Haven Energy's own apex and marketing hosts returns 404. The only
+  served documents sit on clerk.havenenergy.com, a Clerk-operated Frontend API reachable through a
+  CNAME on Haven's domain that backs the consumer "Customer login" flow at
+  https://havenenergy.com/documents. The issuer in both documents is https://clerk.havenenergy.com,
+  so the documents are served from a host Haven controls, but the surface they describe is Clerk's
+  end-user identity product for Haven's homeowner accounts - NOT a Haven Energy developer API,
+  and there is no public client registration, developer portal, or API contract behind it. Recorded
+  here as a factual probe result; no Authentication/OpenIDConnect pointer is emitted, because doing so
+  would credit Haven with a documented developer auth model it does not publish.
+hosts:
+- host: havenenergy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: clerk.havenenergy.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: haven-energy-clerk-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: haven-energy-clerk-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: resources.havenenergy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: landing.havenenergy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: v.havenenergy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

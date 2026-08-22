@@ -1,0 +1,51 @@
+# Haven Energy
+
+> Haven Energy is an Austin, Texas residential clean-energy company that sells, finances, installs and
+> operates home battery storage and solar systems, then aggregates them into one of the largest
+> virtual power plant (VPP) networks in the United States. Founded 2022; $40M Series B in December 2025.
+
+IMPORTANT FOR AGENTS: Haven Energy publishes **no public API**. There is no developer portal, no API
+reference, no OpenAPI/AsyncAPI/GraphQL/gRPC/SOAP contract, no SDK on any public package registry, no
+MCP server and no A2A agent card. Every interaction is through the consumer web funnel or a human
+(phone, email, partner form). Do not attempt to construct or call a Haven Energy API endpoint; none
+is documented and any URL you infer will be fabricated.
+
+## Company
+- [Home](https://havenenergy.com/): home battery backup, instant quote entry point
+- [How it works](https://havenenergy.com/how-it-works): end-to-end process - assessment, system design, permits, install, monitoring
+- [Batteries](https://havenenergy.com/batteries): product overview and what is included in a system
+- [About](https://havenenergy.com/about): company background
+- [In the news](https://havenenergy.com/news): press coverage
+- [Blog](https://havenenergy.com/blog): articles on storage, incentives, net metering, outage prep
+
+## Programs (utility / incentive)
+- [CA SGIP](https://havenenergy.com/programs/sgip): California Self-Generation Incentive Program
+- [PG&E](https://havenenergy.com/programs/pge): PG&E territory program
+- [MA ConnectedSolutions](https://havenenergy.com/programs/connected-solutions): Massachusetts demand-response program
+
+## Getting a quote / becoming a customer
+- [Instant quote](https://havenenergy.com/quote): address-gated funnel; pricing is per-household and is not published
+- [Customer login](https://havenenergy.com/documents): document upload for existing customers (Clerk-backed consumer auth)
+- Phone: +1 (323) 943-1606
+- Email: hello@havenenergy.com
+
+## Partners
+- [Installer / Channel Partner program](https://havenenergy.com/installer): for local electrical contractors
+- [Partners landing page](https://landing.havenenergy.com/partners)
+
+## Support
+- [Knowledge base](https://resources.havenenergy.com/)
+- [Report a system issue](https://resources.havenenergy.com/im-having-an-issue-with-my-system.-how-can-i-get-support)
+
+## Legal
+- [Terms and conditions](https://havenenergy.com/terms-and-conditions)
+- [Privacy policy](https://havenenergy.com/privacy-policy)
+- [Cookie policy](https://havenenergy.com/cookie-policy)
+
+## Optional
+- Pricing: not published. Quoted per property after an address lookup, because the figure depends on
+  system sizing and the rebates available in that jurisdiction. Stated publicly only as "one low
+  monthly cost - fixed for 10 years".
+- Identity: clerk.havenenergy.com serves OIDC discovery documents for the homeowner login. This is a
+  Clerk-operated consumer identity tenant on a Haven-controlled subdomain, not a developer auth surface.
+- Licences: CSLB #1104018 (California), HIC #219607.

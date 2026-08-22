@@ -1,0 +1,23 @@
+generated: '2026-08-22'
+method: searched
+source: https://havenenergy.com/how-it-works
+plan_count: 0
+note: >-
+  Haven Energy publishes no plan or price list of any kind. Pricing is quoted per household through
+  an address-gated instant-quote funnel at https://havenenergy.com/quote, which asks for the property
+  address before returning any number, because the price depends on system sizing plus the rebates and
+  incentives available in that jurisdiction (CA SGIP, PG&E, MA ConnectedSolutions). The only pricing
+  terms stated publicly are qualitative: "one low monthly cost - fixed for 10 years" on the
+  how-it-works page and "affordable monthly pricing" in the site meta description. No dollar figure,
+  tier, quota or overage is published, and there is no API product to price.
+plans: []
+evidence:
+- url: https://havenenergy.com/quote
+  status: 200
+  finding: address-gated instant-quote funnel; no published price
+- url: https://havenenergy.com/how-it-works
+  status: 200
+  finding: qualitative "one low monthly cost - fixed for 10 years" only
+- url: https://havenenergy.com/batteries
+  status: 200
+  finding: product page lists inclusions, no pricing

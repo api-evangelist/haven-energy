@@ -1,0 +1,16 @@
+generated: '2026-08-22'
+method: searched
+source: https://havenenergy.com/
+limit_count: 0
+note: >-
+  Haven Energy publishes no API and therefore no rate limits. Contract discovery found no developer
+  portal, no API reference, and no machine-readable spec on any Haven host, so there is no documented
+  quota, window, burst allowance, 429 behaviour or RateLimit-* response header to record. This is an
+  honest zero, not an unchecked field.
+rate_limits: []
+headers: []
+evidence:
+- url: https://havenenergy.com/openapi.json
+  status: 404
+- url: https://havenenergy.com/docs
+  status: 404

@@ -1,16 +1,33 @@
 aid: haven-energy
 name: Haven Energy
-description: 'Haven Energy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Haven Energy is an Austin, Texas based residential clean-energy company that sells, finances,
+  installs and operates home battery storage and solar systems, and then aggregates those systems
+  into one of the largest virtual power plant (VPP) networks in the United States. Homeowners get an
+  instant online quote, a fixed monthly payment over a ten-year term, end-to-end permitting and
+  certified installation through Haven's Channel Partner network of local electricians, and ongoing
+  remote monitoring. Haven then enrolls the installed batteries into utility and grid programs -
+  California SGIP, PG&E, and Massachusetts ConnectedSolutions among them - so customers can monetize
+  grid participation while utilities and community choice aggregators gain flexible local capacity.
+  Founded in 2022 by Jeff Chapin, Philip Krim and Vinnie Campos, the company raised a $40M Series B
+  in December 2025 led by Giant Ventures. Haven operates as a direct-to-consumer and utility-partner
+  business; it publishes no public developer program, API, or machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/haven-energy/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
+- Energy
+- Energy Storage
+- Solar
+- Virtual Power Plant
+- Distributed Energy Resources
+- Home Battery
+- Clean Energy
+- Utilities
+- Climate Tech
 - Company
 apis: []
 maintainers:
@@ -20,4 +37,52 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://havenenergy.com/
+- type: Blog
+  url: https://havenenergy.com/blog
+- type: Support
+  url: https://resources.havenenergy.com/
+- type: HelpCenter
+  url: https://resources.havenenergy.com/
+- type: Login
+  url: https://havenenergy.com/documents
+- type: TermsOfService
+  url: https://havenenergy.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://havenenergy.com/privacy-policy
+- type: WellKnown
+  url: well-known/haven-energy-well-known.yml
+- type: DomainSecurity
+  url: security/haven-energy-domain-security.yml
+- type: Plans
+  url: plans/haven-energy-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/haven-energy-rate-limits.yml
+- type: LLMsTxt
+  url: llms/haven-energy-llms.txt
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Haven Energy is a direct-to-consumer home battery and VPP operator whose entire product is a
+    quote-to-install funnel plus utility program enrollment; contract discovery found no developer
+    subdomain at all (api., developer., docs., portal. and app.havenenergy.com have no DNS record),
+    every spec and well-known path 404s on the apex, and the only "partner" program on the site is a
+    channel program for local electrical contractors, not an API integration program.
+  evidence:
+  - url: https://havenenergy.com/openapi.json
+    status: 404
+  - url: https://havenenergy.com/docs
+    status: 404
+  - url: https://havenenergy.com/.well-known/api-catalog
+    status: 404
+  - url: https://havenenergy.com/.well-known/agent-card.json
+    status: 404
+  - url: https://landing.havenenergy.com/partners
+    status: 200
+  checked: '2026-08-22'
